@@ -134,6 +134,14 @@ public class FauxToeShopPanel extends JPanel
 	
 	private void setupListeners()
 	{
+		imageBox.addItemListener(new ItemListener()
+		{
+			public void itemStateChanged(ItemEvent currentImageEvent)
+			{
+//				loadPicture();
+			}
+		});
+		
 		filterBox.addItemListener(new ItemListener()
 		{
 			@Override
@@ -202,6 +210,16 @@ public class FauxToeShopPanel extends JPanel
 				else if(filterBox.getSelectedIndex() == 12)
 				{
 					basePicture.mirrorHorizantal();
+					setupPicture();
+				}
+				else if(filterBox.getSelectedIndex() == 13)
+				{
+					basePicture.mirrorTemple();
+					setupPicture();
+				}
+				else if(filterBox.getSelectedIndex() == 14)
+				{
+					basePicture.mirrorArms();
 					setupPicture();
 				}
 		  } 
