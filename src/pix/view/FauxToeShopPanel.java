@@ -209,7 +209,7 @@ public class FauxToeShopPanel extends JPanel
 				}
 				else if(filterBox.getSelectedIndex() == 12)
 				{
-					basePicture.mirrorHorizantal();
+					basePicture.mirrorHorizontal();
 					setupPicture();
 				}
 				else if(filterBox.getSelectedIndex() == 13)

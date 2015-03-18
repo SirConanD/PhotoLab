@@ -198,23 +198,6 @@ public class Picture extends SimplePicture
     } 
   }
   
-  public void mirrorHorizontal()
-  {
-	  Pixel[][] pixels = this.getPixels2D();
-	  Pixel topPixel = null;
-	  Pixel bottomPixel = null;
-	  int hight = pixels[0].length;
-	  for (int row = 0; row < pixels.length; row++)
-	  {
-		  for (int col = 0; col < hight / 2; col++)
-		  {
-			  topPixel = pixels [row][col];
-			  bottomPixel = pixels [row][col];
-			  bottomPixel.setColor(topPixel.getColor());
-		  }
-	  }
-  }
-  
   public void checkerboardFilter()
   {
 	  Pixel [][] matrix = this.getPixels2D();
@@ -290,7 +273,7 @@ public class Picture extends SimplePicture
     } 
   }
   
-  public void mirrorHorizantal()
+  public void mirrorHorizontal()
   {
 	    Pixel[][] pixels = this.getPixels2D();
 	    Pixel topPixel = null;
