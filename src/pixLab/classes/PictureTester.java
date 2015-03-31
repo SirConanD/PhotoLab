@@ -163,6 +163,11 @@ public class PictureTester
     swan.explore();
   }
   
+  public static void testChromakey()
+  {
+	  
+  }
+  
   /** Main method for testing.  Every class can have a main
     * method in Java */
   public static void main(String[] args)
@@ -182,7 +187,7 @@ public class PictureTester
 	//testRotateColorFilter();
 	//testCheckerboardFilterBig(); 
 	//testMirrorVerticalRightToLeft();
-	testMirrorHorizontal();  
+	//testMirrorHorizontal();  
     //testMirrorTemple();
     //testMirrorArms();
     //testMirrorGull();

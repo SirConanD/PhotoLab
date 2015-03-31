@@ -17,12 +17,12 @@ import java.util.List; // resolves problem with java.awt.List and java.util.List
 public class Picture extends SimplePicture 
 {
   ///////////////////// constructors //////////////////////////////////
-  
+
   /**
    * Constructor that takes no arguments 
    */
   public Picture ()
-  {
+  {  
     /* not needed but use it to show students the implicit call to super()
      * child constructors always call a parent constructor 
      */
@@ -33,7 +33,7 @@ public class Picture extends SimplePicture
    * Constructor that takes a file name and creates the picture 
    * @param fileName the name of the file to create the picture from
    */
-  public Picture(String fileName)
+  public Picture(String fileName) 
   {
     // let the parent class handle this fileName
     super(fileName);
@@ -95,6 +95,30 @@ public class Picture extends SimplePicture
       for (Pixel pixelObj : rowArray)
       {
         pixelObj.setBlue(0);
+      }
+    }
+  }
+  
+  public void zeroRed()
+  {
+    Pixel[][] pixels = this.getPixels2D();
+    for (Pixel[] rowArray : pixels)
+    {
+      for (Pixel pixelObj : rowArray)
+      {
+        pixelObj.setRed(0);
+      }
+    }
+  }
+  
+  public void zeroGreen()
+  {
+    Pixel[][] pixels = this.getPixels2D();
+    for (Pixel[] rowArray : pixels)
+    {
+      for (Pixel pixelObj : rowArray)
+      {
+        pixelObj.setGreen(0);
       }
     }
   }
@@ -394,7 +418,24 @@ public class Picture extends SimplePicture
     }
   }
   
-  
+  public void chromakey()
+  {
+	  Picture redMotorcycle = new Picture ("redMotorcycle.jpg");
+	  Picture wall = new Picture ("wall.jpg");
+	  Pixel originalPixel = null;
+	  Pixel otherPixel = null;
+	  Pixel[][] pixels = this.getPixels2D();
+	  for(int row = 0; row < pixels.length; row++)
+	  {
+		  for(int col = 0; col < pixels[0].length-1; col++)
+		  {
+			  originalPixel = pixels[row][col];
+			  otherPixel = pixels[row][col+1];
+			  
+		  }
+	  }
+  }
+
   /* Main method for testing - each class in Java can have a main 
    * method 
    */
